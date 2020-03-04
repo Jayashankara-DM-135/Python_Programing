@@ -1,17 +1,24 @@
-# Class method: Which takes class as parameter
-#               It can be called using Class name and object as well
-#               ususally used Class name.
-#               Defined under @classmethod
+"""
+Class method:
+Methods which are defined using "@classmethod" keyword.
+Class methids takes 'class' as parameter. It can be called using class name or object.
+ususally class name used to call these methods.
 
-                # It can be used as alternative constuctor
+Note: It can be used as a alternative constuctor.
 
-# Static method: Which does not take object or Class as a parameter.
-#                It's called using Class name.
-#                Defined under @staticmethod
+================
+Static method:
+Methods which are defined using "@staticmethod" keyword.
+Static method does not take any object or class as a parameter.
+It's called using class name only.
 
-# Normal method: Which takes object as parameter.
-#                Its called using object.
+================
+ Normal method:
+ Methods which are not defined using "@staticmethod or @classmethod"
+ These methods takes object as parameter.
+ Its called using object only.
 
+"""
 import datetime
 
 class Empolyee:
