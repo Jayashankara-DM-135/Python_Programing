@@ -1,6 +1,0 @@
-fname,lname,age,id
-CSK player
-Suresh,Raina,33,45
-MS,Dohini,37,07
-RCB player
-Virat,Kohili,29,18
