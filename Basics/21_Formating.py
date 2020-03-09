@@ -1,5 +1,5 @@
 """
-Formating string,Dictionary, List, Number and Dates
+Formating string, Dictionary, List, Number and Dates
 """
 #1 string formating
 msg = "Hello"

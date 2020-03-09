@@ -1,4 +1,27 @@
-import sys;
+#Now check for object identity using 'is'
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = [1, 2, 3, 4]
+
+# Value comparison.
+print(a==b)
+print(a==c)
+
+
+# Prints memory location of a and b
+print(id(a))
+print(id(b))
+
+# Memory location comparison.
+print(a is b)
+
+# Both are pointing to same memory location
+d = a
+print(d is a)
+print(a is d)
+
+# More example:
 
 print("difference between == and is")
 
@@ -46,6 +69,7 @@ l1[3] = 20
 print(l1)
 print(l2)
 print(l3)
+
 
 
 
