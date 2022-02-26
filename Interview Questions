@@ -116,6 +116,11 @@ print(res) # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
     -> gc.enable() : Enables automatic garbage collection.
     -> gc.disable(): Disables automatic garbage collection.
     
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+5> Diff between Generator and Iterator:
+
+    
     
     
     
