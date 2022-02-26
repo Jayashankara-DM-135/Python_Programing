@@ -1,0 +1,36 @@
+1> Difference between List and Tuple 
+   List: 
+        1> It's mutable, Means values can be modified.
+           example: 
+                 mylist = [1, 2, 'x', 'abc', 5.0]
+                 mylist[0] = 11 # 1 is replaed with 11
+        2> It can containes different type of data and It can be mutable and imutable as well.
+        
+        3> Better for inseration and deletion operations.
+        4> consumes more memory and procesing type beacuse dynamic nature of mutablity.
+   
+   Tupel:
+         1> It's immutable : Means values can't be modified.
+         exmaple:
+              mytuple = (1, "a", "Hello", 2.0)
+              mytuple[0] = 11 # error
+         2> Simillor to list, can contains multiple data types and both mutabe and imutable object is allowed.
+         3> The tuple is faster than the list because of static in nature and also consumes less mempory compared to list.
+         
+         
+         """
+         mylist = [1, 2, 3]
+         mytuple = (1, "Hello", '2', 4.6, mylist)
+         print(mytuple)  # (1, 'Hello', '2', 4.6, [1, 2, 3])
+         mylist2 = mytuple[4]
+         mylist2.append(4)
+         mylist.insert(0, 0)
+         print(mytuple) # (1, 'Hello', '2', 4.6, [0, 1, 2, 3, 4])
+         mylist2.pop()
+         print(mytuple) # (1, 'Hello', '2', 4.6, [0, 1, 2, 3])
+
+         """
+              
+        
+2> What is decorator and example.
+3> Diff between List compression and dict compression.
