@@ -67,3 +67,27 @@ decorator_display()
 """
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 3> Diff between List compression and dict compression.
+
+List compression syntax:
+
+res = [expr for item in iterable if cond]
+
+example:
+Squre event number form 0 to 10.
+res = [x*x for x in range(10) if x %2 == 0]
+print(res) # [0, 4, 36, 64]
+
+
+Note: range() by default starr from zero and till 10, but 10 is not included.
+
+
+Dict compression syntax:
+
+res = {key:value for (key, value) in iterable if cond}
+
+example:
+Squre even number form 0 to 10.
+res = {n:n*n for n in range(10) if n % 2 == 0}
+print(res) # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
