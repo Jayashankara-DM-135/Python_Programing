@@ -71,7 +71,7 @@ for i in res:
 
 #in case if want to print out all all values of generator without iterating/next,then convert the generator into list.
 res =(x*x for x in [1,2,3,4,5])
-print(list(res)) # this performance penalty
+print(list(res)) # this performance penalty, if you want list, then use list directly instead of generator.
 
 
 
