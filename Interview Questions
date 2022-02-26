@@ -91,3 +91,31 @@ res = {n:n*n for n in range(10) if n % 2 == 0}
 print(res) # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+4> How memory is managed in python ?
+    There is private heap memory in python and It's managed by Python memory manager(Part of  interpreter).
+    This private heap is used to allocate the memory for python objects and data
+    
+    
+    
+   
+    Python_memory_manager ===> Object_specific_alloctor  ===> raw memory allocator ==> memory manager of the operating system.
+    
+    At the lowest level, a raw memory allocator ensures that there is enough room in the private heap for storing all Python-related data 
+    by interacting with the memory manager of the operating system. On top of the raw memory allocator, 
+    several object-specific allocators operate on the same heap and implement distinct memory management policies adapted to the peculiarities of every object type.
+    For example, integer objects are managed differently within the heap than strings, tuples or dictionaries because integers imply different storage requirements and 
+    speed/space tradeoffs. The Python memory manager thus delegates some of the work to the object-specific allocators, 
+    but ensures that the latter operate within the bounds of the private heap.
+    
+    
+    Python also has a built-in garbage collector which recycles all the unsued memory.
+    When an object is no longer referenced by python, the heap space it occupies can be freed. 
+    The "gc" module defines functions to enable and disbale garbage collector:
+    
+    -> gc.enable() : Enables automatic garbage collection.
+    -> gc.disable(): Disables automatic garbage collection.
+    
+    
+    
+    
