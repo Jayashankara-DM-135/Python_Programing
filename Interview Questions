@@ -30,7 +30,40 @@
          print(mytuple) # (1, 'Hello', '2', 4.6, [0, 1, 2, 3])
 
          """
-              
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>          
         
 2> What is decorator and example.
+
+Decotator is function whic takes some function as argument, add some kind of functionality and then returns another function. A
+All of this without alterting the source code of the original function that you passed in.
+
+"""
+Exmples:
+
+def decorator_fun(some_fun):
+    def wrapper_func(var1, var2):
+        print("Wrapper function: Prameters: {} and {}".format(var1, var2 ))
+        return some_fun(var1)
+    
+    print("Decorator Fun is called")
+    return wrapper_func
+
+
+
+@decorator_fun
+def dispaly(var):
+    print("Display something relates to : {}".format(var))
+
+dispaly("Cricket", "Dhoni")
+
+-----------
+Above calling func can be done as below as well.
+
+def dispaly(var):
+    print("Display something relates to : {}".format(var))
+decorator_display = decorator_func(display)
+decorator_display()
+
+"""
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 3> Diff between List compression and dict compression.
