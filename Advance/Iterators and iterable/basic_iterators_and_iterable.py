@@ -2,12 +2,12 @@
 Iterators: One which knows it's state by it's self.
            Object which supports next() will be called as iterator since with help of next() method
            object can gets it's next state.
-Iterable: Object which can be loop through is called iterable.
-I mean object which is having __iter__()(special method) is called iterable.
+Iterable:  Object which can be loop through is called iterable.
+           I mean object which is having __iter__()(special method) is called iterable.
 """
 
 #Note: Iterator is object which knows it's state while iterating.
-#List is iterable , but iterator
+#List is iterable , but not iterator
 num = [1, 2, 3]
 print(dir(num))
 
