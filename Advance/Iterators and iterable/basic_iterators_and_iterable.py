@@ -1,17 +1,19 @@
 """
 Iterators: One which knows it's state by it's self.
-           Object which supports next() will be called as iterator since with help of next() method
-           object can gets it's next state.
+           Object which supports next() will be called as iterator since with help of next() method object can gets it's next state.
 	   Once it reached the end , further call to next() will throw StopIteration exception.
+	   
 	   Note: 
-	    --> We can use for loop for iterator as well.
-	    --> Only once we can acccess the element, we can repeatlty access the Iterator object, It will through StopIteration exception.
+	    --> We can use for loop for loop iterator as well. Beacuse for loop internally ueses to iterator. 
+	    --> When no more data are available a StopIteration exception is raised instead. 
+	        At this point, the iterator object is exhausted and any further calls to its __next__() method just raise StopIteration again.
+	    --> Iterators are required to have an __iter__() method that returns the iterator object itself so every iterator is also iterable 
 	   
 Iterable:  Object which can be loop through is called iterable.
            I mean object which is having __iter__()(special method) is called iterable.
 	   next() will not work on iterable, Sicne it does not keep the current state.
 	   We can access the element as many time as possible , No restictation on that since it does not know the current state.
-	   Iterable can be converted into Iterator using iter(iterable_object)
+	   Iterable can be converted into Iterator using iter(iterable_object) method.
 """
 
 #Note: Iterator is object which knows it's state while iterating.
