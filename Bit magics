@@ -1,1 +1,103 @@
 https://leetcode.com/discuss/study-guide/1151183/TIPS-or-HACKS-WHICH-YOU-CAN'T-IGNORE-AS-A-CODER
+
+
+
+def checkEven(n):
+    if (n & 1 == 0):
+        return True
+    else:
+        return False
+
+def swapNumber(x, y):
+    x = x ^ y
+    y = x ^ y
+    x = x ^ y
+    return x, y
+
+def checkKthbitSet(num, k):
+     x = num & (1 << (k-1))
+     if x:
+         return True
+     return False
+ 
+def toogleKthbit(num, k):
+    x = num ^ (1 << (k-1) )
+    return x
+
+def setKthBit(num, k):
+    x = num | (1 << (k-1))
+    return x
+
+def unsetKthBit(num, k):
+    x = num & (~(1 << (k-1)))
+    return x
+
+def powerOftwo(num):
+    x = num & (num -1)
+    if x == 0:
+        return True
+    return False
+
+def caseChange(ch):
+    """
+    A = 65
+    a = 97
+    Diff between a and A is  = 32 , It means pow(2, 5), Means 5th bit
+    if we toogle 5th bit in lower case we will get Upper and visa versa.
+    """
+    
+    res = ch ^ (1 << 5)
+    return res
+
+def min(x, y):
+    
+    res = y ^ ((x^y) & -(x < y))
+    return res
+
+def max(x,y):
+    res = x ^ ((x^y) & -(x < y))
+    return res
+
+
+def countNumSetBits(num):
+    count = 0
+    while num:
+        count +=1
+        num &= num-1
+    
+    return count
+
+# 1000100 : 2
+# 1010000:  4
+# 10: 1
+# 10101011: 0
+def countTrainingZeros(num):
+    count = 0
+    while num & 1 == 0:
+        count += 1
+        num = num >> 1
+    
+    return count
+
+if __name__ == "__main__":
+    print(checkEven(2))
+    print(checkEven(5))
+    print(checkEven(6))
+    print(pow(2, 2))
+    
+    print(pow(2, 3))
+    print(pow(2, 4))
+    
+    x, y = swapNumber(10, 20)
+    print(x,y)
+    
+    print(checkKthbitSet(8, 4))
+    print(powerOftwo(28))
+    res = caseChange(ord('B'))
+    print(chr(res))
+    print(min(-19, -5))
+    print(max(-100, -19))
+    print(countNumSetBits(8))
+    print(countTrainingZeros(9))
+    
+
