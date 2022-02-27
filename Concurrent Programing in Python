@@ -1,3 +1,6 @@
+https://engineering.contentsquare.com/2018/multithreading-vs-multiprocessing-in-python/
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Synchronous VS Asynchronus
 
 The basic idea is:
@@ -77,6 +80,26 @@ Suppose, we are having 5 processes P1, P2, P3, P4, and P5. In a uni-processor sy
 the next process will be executed and so on. But in a multiprocessor system, the different process can be assigned to different processors and this,
 in turn, decreases the overall process execution time by the system. 
 A dual-processor system can execute two processes at a time while a quad-processor can execute four processes at a time
+
+Suppose, we are having 5 processes P1, P2, P3, P4, and P5. In a uni-processor system, only one process can be executed at a time and after its execution, 
+the next process will be executed and so on. But in a multiprocessor system, the different process can be assigned to different processors and this, in turn, 
+decreases the overall process execution time by the system. 
+A dual-processor system can execute two processes at a time while a quad-processor can execute four processes at a time.
+===================
+Lets have 2 CPU/Processor/Socket and Each CPU has two core.
+
+Total : 2 (CPU) * 2 cores per CPU = 4 cores ==> Means max 4 thread can execute paralley. if there are more than 4 thread then schduling will kick in.
+
+if you run one single-threaded application, it will be allocated to a single core(So CPU utilization will show 25%), and activate only a single HW thread on it. 
+That thread will be able to utilize 100% of that core as there is no other thread running along with it. 
+If you activate another application it will usually be allocated to another core(Now CPU utilization of system is 50%), and so on until you saturate the number of cores (here max is 4 core). 
+Beyond that any additional thread will be scheduled to the same cores again using SMT. 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Multi processing and multi threading are 2 different things. Unless you want to do IO based operations (e.g. HTTP requests, Reading from Queues/DB), 
+then multithreading is no use for you, 
+as python doesn't have a true multi threading. (you should read about multi threading in python, and about the GIL- Global Interperter Lock) 
 
 
 
