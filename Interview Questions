@@ -134,15 +134,41 @@ res = (n*n for n in range(10) if n% 2 == 0)
   
  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  
- 7>  Diff zip() vs izip(): 
+ 6>  Diff zip() vs izip(): 
    izip was there in python 2.X , But in python 3 izip is renamed to zip.
    
    In Python2.x:
    zip(): It will produce all the output in one go. Hence it comsumes more memory and prcessing time as well.
    izip() : It's like Itertor, more specifically like generator, It produces output when we called it. 
+   
+   In Python 2.x:
+        zip creates a list of tuples (with min(a, b) length of iterable a and b), so if you do zip(range(1, 100), range(1, 10000000)) 
+        it creates a list of tuples in memory with 100 elements (since min(a, b) is a here in this example). 
+        so it's consumes more memory and it's slow for appliction which does not need all the res up front.
+        
+        izip is a sequence object that evaluates lazily. It will yeild the result when you ask for it. Like a generator.
+
+    In Python 3:
+         zip does the equivalent of Python 2's izip. To get the list of tuple, you have to explicitly use list(zip(a, b)).
+         izip no longer exists.
+    
+ 
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ 7> Diff range() and xrange()
+     
+    In Python 2.x:
+        range creates a list, so if you do range(1, 10000000) it creates a list in memory with 9999999 elements. so it's consumes more memory and it's slow for appliction
+        which does not need all the res up front.
+        
+        xrange is a sequence object that evaluates lazily. It will yeild the result when you ask for it. Like generator.
+
+    In Python 3:
+         range does the equivalent of Python 2's xrange. To get the list, you have to explicitly use list(range(...)).
+          xrange no longer exists.
     
 
-    
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
     
     
