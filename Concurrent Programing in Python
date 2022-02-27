@@ -17,3 +17,27 @@ Well, here's where the callback comes in. You launch the request "to the void of
 on the other end sends you its response, that function is run with said response as the first argument.
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Concurrency:
+Concurrency means that an application is making progress on more than one task at the same time (concurrently). 
+Well, if the computer only has one CPU the application may not make progress on more than one task at exactly the same time, 
+but more than one task is being processed at a time inside the application. It does not completely finish one task before it begins the next.
+
+Parallelism requires hardware with multiple processing units, essentially. 
+In single-core CPU, you may get concurrency but NOT parallelism. Parallelism is a specific kind of concurrency where tasks are really executed simultaneously.
+
+
+Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once.
+
+An application can be concurrent — but not parallel, which means that it processes more than one task at the same time, 
+                                   but no two tasks are executing at the same time instant.
+                                   
+An application can be parallel — but not concurrent, which means that it processes multiple sub-tasks of a task in multi-core CPU at the same time.
+
+An application can be neither parallel — nor concurrent, which means that it processes all tasks one at a time, sequentially.
+
+An application can be both parallel — and concurrent, which means that it processes multiple tasks concurrently in multi-core CPU at the same time.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
