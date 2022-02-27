@@ -3,7 +3,9 @@ Looging example
 """
 import logging
 #print(logging.__file__)
-logging.basicConfig(filename='closure_logging.txt', level=logging.INFO)
+logging.basicConfig(filename='closure_logging.txt', level=logging.INFO)  
+
+# level=logging.INFO, Means it wil log only logging.info only, if we use logging.debug or any other method those logging will not happen.
 
 
 def logger(func):
