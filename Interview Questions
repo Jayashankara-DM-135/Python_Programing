@@ -123,6 +123,24 @@ res = (n*n for n in range(10) if n% 2 == 0)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 5> Diff between Generator and Iterator:
+  Generator is on Iterator, But all Iterator is not Generator. Generator yeilds value when there is ask. 
+  Otherwise they will stop it's execution when yeild statement is encounter.
+  
+  Itertor is object which knows it's current state(next()).
+  Itertor will have next() and __iter__ methods , By the way Itertor is on iterable , But reverse is not true.
+  
+  Generartor is Iterator and Itertor is iterable
+  But reverse is not true.
+  
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ 7>  Diff zip() vs izip(): 
+   izip was there in python 2.X , But in python 3 izip is renamed to zip.
+   
+   In Python2.x:
+   zip(): It will produce all the output in one go. Hence it comsumes more memory and prcessing time as well.
+   izip() : It's like Itertor, more specifically like generator, It produces output when we called it. 
+    
 
     
     
