@@ -50,6 +50,35 @@ This is what the global interpreter lock is for.
 Spawning processes is a bit slower than spawning threads
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Diff b/w Multicore and Multiprocessor:
+
+Each CPU/Processor can have more oen core.
+
+Multocore:
+It is a single computing component(CPU) with two or more separate processing units called cores. 
+These cores can individually read and execute program instructions. It means that the system has one CPU with multiple cores. 
+They work in such a way that it feels like the computer system has several processors but in reality, they are the cores and not processors.
+
+Advantages:
+
+Since multiple CPU cores are placed on the same die, so in this case, cache coherency will be higher.
+It allows higher performance at lower energy because the cores are very energy efficient.
+
+Disadvantages:
+
+If you are using a dual-core system, then its speed should be double than the single-core but in reality, you will get 70-80% more speed only.
+Not every Operating System supports multi-core.
+
+===================
+Multiprocessor System:
+two or more processors present in the same computer, sharing the system bus, memory, and other I/O is said to be Multiprocessing System.
+
+Suppose, we are having 5 processes P1, P2, P3, P4, and P5. In a uni-processor system, only one process can be executed at a time and after its execution,
+the next process will be executed and so on. But in a multiprocessor system, the different process can be assigned to different processors and this,
+in turn, decreases the overall process execution time by the system. 
+A dual-processor system can execute two processes at a time while a quad-processor can execute four processes at a time
+
+
 
 
 
