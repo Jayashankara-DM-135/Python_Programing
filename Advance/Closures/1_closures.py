@@ -1,5 +1,7 @@
 """
-Closures:
+Closures: 
+          Python Closures are these inner functions that are enclosed within the outer function. 
+          Closures can access variables present in the outer function scope.
 """
 print('------------ Example 1----------------------')
 def outer():
