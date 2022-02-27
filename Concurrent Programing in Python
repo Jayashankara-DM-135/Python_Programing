@@ -115,6 +115,25 @@ Conclusion : For Python.
    For instance the default value of m in ThreadPoolExecutor is set to 5 [Source] which honestly feels quite random in my opinion
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+GIL: Global Interpreter Lock:
+
+Python's GIL is intended to serialize access to interpreter internals from different threads. 
+On multi-core systems, it means that multiple threads can't effectively make use of multiple cores
+
+GIL is only present in cpython , But not in jpython.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Why GIL is not a problem for multiprocessing ?
+
+True parallelism in Python is achieved by creating multiple processes, each having a Python interpreter with its own separate GIL.
+
+Python has three modules for concurrency: multiprocessing, threading, and asyncio. When the tasks are CPU intensive, we should consider the multiprocessing module.
+When the tasks are I/O bound and require lots of connections, the asyncio module is recommended. 
+For other types of tasks and when libraries cannot cooperate with asyncio, the threading module can be considered.
+
+
 
 
 
