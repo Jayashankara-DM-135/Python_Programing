@@ -4,18 +4,23 @@ Coding guide line in Python
 
 1> Use range() instead of xrange =>after python 3.0 
    range() will produce elements one at time while iterating. same as xrange() in python < 3.0 version 
+   
 2> Try to use for else clause when ever it's possible
+
 3> Use iter() with arguments like start and step
 
 4> for i in range(0-10):
       print(i)
+      
 5> for reverse indexing : use reverse() first and then loop over it
    for i in reverse(nums)
 
 6> looping over two collections: 
-   zip() vs izip():
+   zip() vs izip(): 
+   izip was there in python 2.X , But in python 3 izip is renamed to zip.
+   
+   In Python2.x:
+   zip(): It will produce all the output in one go. Hence it comsumes more memory and prcessing time as well.
+   izip() : It's like Itertor, more specifically like generator, It produces output when we called it. 
     
-    zip() ==> Will uses the temport tuple to combine two collections, so it consumes more memory.
-    izip() ==>
-
-7>
+  
