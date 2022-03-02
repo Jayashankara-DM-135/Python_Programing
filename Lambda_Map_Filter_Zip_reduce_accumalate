@@ -26,14 +26,20 @@ print(res3)
 print(next(res4))
 
 ==============================
+Lambda:
+syntax:
 
-Lambda: Can takes mutiple aguments and only one expression (expression is different from statement).
+lambda parameter_list_seprated_by_comma : single_expression
+
+Can takes mutiple aguments and only one expression (expression is different from statement).
         Why Lambda con not take "return" statement ?
         Ans: Because return is a statement. Lambdas can only contain expressions.
 Ex:
 print((lambda: None)())
 #print((lambda: return None)())  ==> Since return is statment and None is expression, Here lambda need only one expression, But we passed one statement and expression.
 
+===========================
+Terninary Operator:
 Ternary opertaor in python is not supported, But same beahvior can be achived using:
 [_] if [True] else [_]
 
@@ -42,5 +48,31 @@ a, b = 10, 20
 print("Both are equal" if a == b else "a is greate than b" if a > b else "b is greater than a")
 
 ========================================
+
+Difference between Map and Filter:
+
+Map:  The map() function iterates through all items in the given iterable and executes the function we passed as an argument on each of them.
+
+Filter: Similar to map(), filter() takes a function object and an iterable and creates a new list.
+        As the name suggests, filter() forms a new list that contains only elements that satisfy a certain condition
+
+fruites = ['Apple', 'Banna', 'Afruit', 'Grape', 'Mango']
+
+res = map(lambda x: x[0] == 'A', fruites)
+print(list(res)) # [True, False, True, False, False]
+
+res2 = filter(lambda x: x[0] == 'A', fruites)
+print(list(res2)) # ['Apple', 'Afruit']
+
+print(list(res)) # [], Since map object is Iterator, We can loop through iterator only once
+print(list(res2)) # [], Same here as well, filter object is basically iterator.
+
+
+
+
+
+
+
+
 
 
