@@ -1,0 +1,56 @@
+The difference between shallow and deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances):
+
+A shallow copy constructs a new compound object and then (to the extent possible) inserts references into it to the objects found in the original.
+
+A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.
+
+
+https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/
+
+
+import copy
+
+nums = [1, 2, 3]
+
+# It's exact refence existing nums, if any changes one of them reflected in other
+num1 = nums
+
+
+#Both are shollow copy
+num2 = nums.copy()
+num3 = copy.copy(nums)
+
+# Deep copy
+num4 = copy.deepcopy(nums)
+
+"""
+Note: In this exmaple both shallow copy and deep copy beahvious same.
+      Since there is no compont object, means no list or class instance within 
+      the nums list.
+"""
+
+# ===================================
+
+val = [10, 20, [20, 30]]
+
+val1 = copy.copy(val)
+
+
+val1[0] = 100
+print(val, val1) # [10, 20, [20, 30]], [100, 20, [20, 30]]
+val1[2][0] = 202
+print(val, val1) # [10, 20, [202, 30]] [100, 20, [202, 30]]
+
+# Deepcopy
+val = [10, 20, [20, 30]]
+val2 = copy.deepcopy(val)
+val2[0] = 100
+print(val, val2) #[10, 20, [20, 30]] [100, 20, [20, 30]]
+val2[2][0] = 202
+print(val, val2) # [10, 20, [20, 30]] [100, 20, [202, 30]]
+
+
+
+
+
+
