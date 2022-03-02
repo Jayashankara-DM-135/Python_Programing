@@ -1,0 +1,46 @@
+Diff refrence between reduce and accumulate:
+---------------------------------------------------
+
+1> reduce give the final result, Where as accumlate give all the intermediate results as in the generator form.
+2> reduce takes iterables as a second argument , but accumulate takes iteraror as first agument.
+
+
+from itertools import accumulate
+from functools import reduce
+import operator
+
+nums = [1, 2, 3]
+res = reduce(lambda x , y:  x+y, nums)
+
+res2= accumulate(nums, lambda x, y: x+y)
+
+print(res)
+print(res2)
+
+print(next(res2))
+
+# same using operator module
+res3 = reduce(operator.add, nums)
+res4 =  accumulate(nums, operator.add)
+print(res3)
+print(next(res4))
+
+==============================
+
+Lambda: Can takes mutiple aguments and only one expression (expression is different from statement).
+        Why Lambda con not take "return" statement ?
+        Ans: Because return is a statement. Lambdas can only contain expressions.
+Ex:
+print((lambda: None)())
+#print((lambda: return None)())  ==> Since return is statment and None is expression, Here lambda need only one expression, But we passed one statement and expression.
+
+Ternary opertaor in python is not supported, But same beahvior can be achived using:
+[_] if [True] else [_]
+
+exmaple:
+a, b = 10, 20
+print("Both are equal" if a == b else "a is greate than b" if a > b else "b is greater than a")
+
+========================================
+
+
