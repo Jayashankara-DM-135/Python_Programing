@@ -1,0 +1,21 @@
+Monkey Patching in Python (Dynamic behaviour):
+In python monkey patch is refered to dynamic modification of class or methods. In python we can change the behaviour of the code dynamically.
+
+vi mymodule.py
+
+class A:
+     def func():
+         print("func")
+----------
+vi exmaple.py
+import mymodule
+
+def test():
+   print("test")
+ 
+mymodule.A.func = test
+obj = A()
+obj.func() # test
+
+
+https://www.geeksforgeeks.org/monkey-patching-in-python-dynamic-behavior/
