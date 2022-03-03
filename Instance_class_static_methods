@@ -1,0 +1,21 @@
+Diff b/w instance method , class method and static methods:
+
+Instance method: 
+> Used to access instance varibale , It also possible to access class varible.
+> Can be called uisng object and class, Better to call using object as name suggets it's instance method.
+> if we use class name to call instance method, then object of the class need to passed as a first paarmeter.
+> First parameter to instamce method is 'self'.
+
+
+Class Methods:
+> Class methods are usually used to access class variables. It's not possible to access the instance varible.
+> Can be called using both class and Object, Better to call using Class name since these method deleas with only class varible.
+> Decalred using "@classmethod" keyword 
+> Class method uses "cls" as a first parameter.
+
+Static method:
+> When method is not accessing any of class varible or instance varible then we should declare them as staic method.
+> It does not take self or cls as a parameter.
+> It can be called using Class name or Object name, Better to call using Class name.
+> Declared using "@staticmethod"
+
