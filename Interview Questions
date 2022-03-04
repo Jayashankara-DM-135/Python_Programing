@@ -169,6 +169,24 @@ res = (n*n for n in range(10) if n% 2 == 0)
     
 
  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ Diff Encapsulation and Abstraction :
+ 
+ Encapsulation is wrapping up of data and methods in a single unit and making the data accessible only through methods(getter/setter) to ensure safety of data.
+
+Abstraction is hiding internal implementation details of how work is done.
+
+Take and example of following stack class:
+
+Class Stack
+{
+private top;
+void push();
+int pop();
+}
+Now encapsulation helps to safeguard internal data as top cannot be accessed directly outside.
+
+And abstraction helps to do push or pop on stack without worrying about what are steps to push or pop
     
     
     
