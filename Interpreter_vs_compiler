@@ -1,0 +1,26 @@
+
+An interpreted language is a high-level language run and executed by an interpreter (a program which converts the high-level language to byte code and then executing) 
+on the go; it processes the program a little at a time.
+
+A compiled language is a high-level language whose code is first converted to machine-code by a compiler (a program which converts the high-level language to machine code) 
+and then executed by an executor (another program for running the code).
+
+
+Python : Its Interpreted language.
+
+Let's summarize what happens behind the scenes:
+
+When Python executes a program, Python reads the .py into memory, and parses it in order to get a bytecode,  (which is not machine level code, but close to that)
+then goes on to execute. For each module that is imported by the program, Python first checks to see whether there is a precompiled bytecode version, in a .pyo or .pyc, 
+that has a timestamp which corresponds to its .py file. Python uses the bytecode version if any. 
+Otherwise, it parses the module's .py file, saves it into a .pyc file, and uses the bytecode it just created.
+
+Byte code files are also one way of shipping Python codes. Python will still run a program if all it can find are.pyc files, 
+even if the original .py source files are not there.
+
+Python Virtual Machine (PVM) : Example cpython (Default python uses cpython as PVM, It's runtime)
+
+Once our program has been compiled into byte code, it is shipped off for execution to Python Virtual Machine (PVM). 
+The PVM is not a separate program. It need not be installed by itself. Actually, the PVM is just a big loop that iterates through our byte code instruction,
+one by one, to carry out their operations. The PVM is the runtime engine of Python. It's always present as part of the Python system. 
+It's the component that truly runs our scripts. Technically it's just the last step of what is called the Python interpreter.
