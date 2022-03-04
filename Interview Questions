@@ -187,6 +187,109 @@ int pop();
 Now encapsulation helps to safeguard internal data as top cannot be accessed directly outside.
 
 And abstraction helps to do push or pop on stack without worrying about what are steps to push or pop
+
+======================================
+Class : It's blue print for object.
+        It consits of attribute and methods for the object of the class
+        
+        Note: In python Attributes are always public. Not Pure Private member conscpet in Python.
+Object: It's enity that as state/Attribute and behaviour/methods  Or we can say it's instance of class.
+
+slef: It's first paramter for all the methods defined in class, It's simillor to "this" pointer in c++. It's pointing current object which invoked this method.
+
+__init__: Simillor to C++ constructor, get called when Object of class is created. uesed to initialize the object state/attributes.
+
+
+Inheritence : It's capbality of once class to dervive or inherit the properies and methods another class.
+              It's usesd to repesent real world releationship
+              Provide code reusablity.
+              
+              Different forms of Inheritance: 
+              1. Single inheritance: When a child class inherits from only one parent class, it is called single inheritance. 
+                class A:
+                   pass
+                class B (A):
+                   pass
+                   
+              2. Multiple inheritance: When a child class inherits from multiple parent classes, it is called multiple inheritance. 
+                class A:
+                  pass
+                class B:
+                  pass
+                
+                class C (A, B):
+                  pass
+                  
+              3. Multilevel inheritance: When we have a child and grandchild relationship.
+                class A:
+                  pass
+                class B(A):
+                   pass
+                class C(B):
+                  pass
+              
+              4. Hierarchical inheritance More than one derived classes are created from a single base.
+                  class A:
+                    pass
+                 
+                 class B(A):
+                    pass
+                 class C(A):
+                 
+              
+              5. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
+
+
+Polymorphism: -> Means having many forms.  polymorphism means the same function name (but different signatures) being used for different types
+               Example: 
+               
+               Builtin function: len()
+               print(len("geeks"))
+               print(len([10, 20, 30]))
+               
+               //Define your own 
+               def add(x, y, z=10):
+                   return x+y+z
+               
+               print(add(2, 3))
+               print(add(2,3,4))
+               
+             --> Method overloading: 
+                  Note: Python does not support method overloading. We may overload the methods, but can only use the latest defined method.
+                  1>  More than one method of the same class shares the same method name having different signatiures.
+                  2>  It's complile time Polymorphsim.
+                                     class Employee:
+                                        def fun(var1):
+                                            pass
+                                        def fun(var2, var2)
+                                            pass
+                                        def fun(var1, var2, var3)
+                   3> Add more behaviour along with existing behaviour
+                   4> No need for more than one class
+                                        
+             -> Method Overriding: 
+                    1> It's Run-time polymorphim 
+                    2>  Parent class method is redefined in child class.method in both class must have the same name and same signature.
+                    3> Inheritance required here.
+                    4> Used to change the behaviour
+                    
+            
+                 
+               
+               
+               
+
+              
+                  
+       
+       
+                 
+                  
+              
+              
+              
+
+
     
     
     
