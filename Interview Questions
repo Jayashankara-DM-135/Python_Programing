@@ -316,6 +316,15 @@ Example:
                 self.__salary = salary
                 # Public member
                 self.name = name
+=====================================
+diff __str__ and __repr__:
+Both are object reprsentation
+ __repr__:  goal is to be unambiguous
+ __str__: More reable format for user
+It will invoke in below order:
+1> __str__ if it's overloaded first
+2> __repr__ if it's overloded and __str__ is not overloaded
+3> otherwise it prints vage info about object
           
 
           
