@@ -325,6 +325,15 @@ It will invoke in below order:
 1> __str__ if it's overloaded first
 2> __repr__ if it's overloded and __str__ is not overloaded
 3> otherwise it prints vage info about object
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Diff b//w map and submitted in concurrent.futures.ProcessPollExecutor:
+
+.map() gives results in the order they are submitted, while
+iterating over a list of Future objects with concurrent.futures.as_completed() won't guarantee this ordering, because this is the nature of as_completed()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
           
 
           
