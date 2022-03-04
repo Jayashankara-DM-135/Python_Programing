@@ -172,23 +172,26 @@ res = (n*n for n in range(10) if n% 2 == 0)
  
  Diff Encapsulation and Abstraction :
  
- Encapsulation is wrapping up of data and methods in a single unit and making the data accessible only through methods(getter/setter) to ensure safety of data.
+ Encapsulation: 
+    -> It is wrapping up of data and methods in a single unit and making the data accessible only through methods(getter/setter) to ensure safety of data.
+    -> Note: Using class encapuslation can be done.
 
-Abstraction is hiding internal implementation details of how work is done.
+ Abstraction:
+    -> It' is hiding internal implementation details of how work is done.
 
-Take and example of following stack class:
+ Take and example of following stack class:
 
-Class Stack
-{
-private top;
-void push();
-int pop();
-}
+ Class Stack
+  {
+    private top;
+    void push();
+    int pop();
+  }
+
 Now encapsulation helps to safeguard internal data as top cannot be accessed directly outside.
-
 And abstraction helps to do push or pop on stack without worrying about what are steps to push or pop
 
-======================================
+===================================
 Class : It's blue print for object.
         It consits of attribute and methods for the object of the class
         
@@ -198,6 +201,10 @@ Object: It's enity that as state/Attribute and behaviour/methods  Or we can say 
 slef: It's first paramter for all the methods defined in class, It's simillor to "this" pointer in c++. It's pointing current object which invoked this method.
 
 __init__: Simillor to C++ constructor, get called when Object of class is created. uesed to initialize the object state/attributes.
+
+supper(): it's used call base class __init__ method. Base calss __init__ can be called using Class name as well, but in that case we need to pass object as a first parameter
+
+================================
 
 
 Inheritence : It's capbality of once class to dervive or inherit the properies and methods another class.
@@ -238,7 +245,8 @@ Inheritence : It's capbality of once class to dervive or inherit the properies a
                  
               
               5. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
-
+              
+=============================================
 
 Polymorphism: -> Means having many forms.  polymorphism means the same function name (but different signatures) being used for different types
                Example: 
@@ -272,6 +280,37 @@ Polymorphism: -> Means having many forms.  polymorphism means the same function 
                     2>  Parent class method is redefined in child class.method in both class must have the same name and same signature.
                     3> Inheritance required here.
                     4> Used to change the behaviour
+                    
+=====================================
+
+
+Access specifier in Python:
+
+Protected: In python It's just convention not a rule. using single underscore “_”. 
+          1> Protected members (in C++ and JAVA) are those members of the class that cannot be accessed outside the class but can be accessed from within the class and 
+            its subclasses. 
+          2> To accomplish this in Python, just follow the convention by prefixing the name of the member by a single underscore “_”. 
+          3>  But in Python, Although the protected variable can be accessed out of the class as well as in the derived class(modified too in derived class), 
+              it is customary(convention not a rule) to not access the protected out the class body.
+              
+Private: In Python , It's just convention not a rule, using doubel underscore "__".
+         1> Private members are similar to protected members, the difference is that the class members declared private should neither be accessed outside 
+            the class nor by any base class.
+            
+Example:
+      class Employee(object):
+          def __init__(self, name,level, salary):
+                # Protected 
+                self._level = level
+                # Private member
+                self.__salary = salary
+                # Public member
+                self.name = name
+          
+
+          
+
+
                     
             
                  
