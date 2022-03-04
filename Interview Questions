@@ -169,6 +169,16 @@ res = (n*n for n in range(10) if n% 2 == 0)
     
 
  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Notes: 
+ 1> Python does not support Method overloading
+ 2> Python does not support protected and private acessspifier, by default all public. _ and __ access specifer are just convention not rule.
+ 3> Python support all type of inhertence.
+ 
+ Four Pillars of OOP :
+   1> Encapsulation
+   2> Abstraction
+   3> Inheritance
+   4> Polymorphism
  
  Diff Encapsulation and Abstraction :
  
