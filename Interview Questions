@@ -385,6 +385,19 @@ print(x) # Error, Since Line 1 , it's just exposed only to outer loop, But not g
 
 -------------------------
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Diff b/w sort and sorted in list:
+
+ sort is inplace sorting ==> means modifiy the same list
+ sorted will give the sorted list , Keeping the orginal as it's.
+ 
+ nums = [1, 28, 3, 1, 5]
+ nums.sort() # Inplace sort
+ 
+ sec = sorted(nums)
+ print(sec) # sorted
+ print(nums) # Not sorted.
+
           
 
 
