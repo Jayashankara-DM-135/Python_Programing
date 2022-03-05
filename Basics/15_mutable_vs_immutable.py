@@ -3,7 +3,7 @@ Mutable vs Immutable
 Mutable : Chanable 
 Im-mutable : Not chanable
 
-Mutbale Example: List, Dict (Only values), Set (Only set, but not value of set, Set can be updated with new values).
+Mutbale Example: List, Dict (Only values, key can't chagable), Set (Only set, but not existing value of set, Set can be updated with new values).
 Immutable Example: String, Tuple
 """
 
