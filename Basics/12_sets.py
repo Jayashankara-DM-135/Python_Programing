@@ -1,5 +1,21 @@
 """
-SETS: unordered list , Means duplicates are not allowed and it's immutable(Non allowed to change)
+SETS: 
+   1> unordered list.
+   2> Duplicates are not allowed 
+   3> Sets it self is mutable, But value inside SET are imutable. 
+      Example: 
+          myset = set() # #empty set
+          myset.add(10) # We add new , means set is mutable
+          myset.update([20, 30]) # Now add many elements sets.
+          myset2 = {40, 50}
+          myset.update(myset2) # Now set got updated few more elements.
+          print(myset)  # 10, 20, 40, 30, 50 , We can see here order is not guranted.
+          
+          But,
+          print(myset[0]) # TypeError: 'set' object is not subscriptable
+          myset[0] = 100  # TypeError: 'set' object is not subscriptable
+      
+   
 """
 
 # Duplicates removed silientely
