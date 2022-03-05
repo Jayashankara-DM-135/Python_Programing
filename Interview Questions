@@ -334,7 +334,56 @@ Diff b//w map and submitted in concurrent.futures.ProcessPollExecutor:
 iterating over a list of Future objects with concurrent.futures.as_completed() won't guarantee this ordering, because this is the nature of as_completed()
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-          
+
+Varibale Scope:
+ --> LEGB 
+--> Order In which evaluated:
+      Local
+      Enclosing
+      Global
+      Builtins
+=========================
+Diff between global and nonlocal:
+global : make local varibale acceible globally
+nonlocal: make local varible accsible in outer loop, but not globally.
+
+'global' keyword can be used without declaring that varible before prefixing global keyword.
+Whereas 'nonlocal' requires that varible should be decalred already in outer loop, before prefixing 'nonlocal' tpo varible in inner loop.
+
+Ex: 1
+
+def outer():
+    x = "Outer X"
+    def inner():
+        global x # Line 1
+        x = "Inner X"
+        print(x) # Inner X
+    inner()
+    # Outer X, Since x="Outer X" is local scope for outer(),
+    # But x = "Inner X" is now became global scope, Beacuse of Line 1
+    # Local is hight priortiy then global.
+    print(x)
+
+outer()
+print(x) # Inner X
+---------------------------------------
+Ex: 2
+
+def outer():
+    x = "Outer X"
+    def inner():
+        nonlocal x # Line 1
+        x = "Inner X"
+        print(x) # Inner X
+    inner()
+    # Line 1 makes x is accessible outside this loop, but limited 
+    # only outer loop/encloser
+    print(x) # Inner X
+
+outer()
+print(x) # Error, Since Line 1 , it's just exposed only to outer loop, But not globally
+
+-------------------------
 
           
 
