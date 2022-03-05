@@ -136,3 +136,8 @@ for n in listtmp2:
 my_gen = (n*n for n in nums)
 for n in my_gen:
 	print(n)
+================================================
+tuple compression:
+nums = (1, ,2,3, 4,5 )
+new_tuple = tuple((n*n for n in nums))
+print(new_tuple)
