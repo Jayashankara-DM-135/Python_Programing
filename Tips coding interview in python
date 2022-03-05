@@ -1,0 +1,6 @@
+1> In python string is immutable, so while reversing string or any string manipulation, Convert string into list.
+  res = list(str)
+  # Convert list into string.
+  "".join(res)
+  
+  
