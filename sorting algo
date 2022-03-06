@@ -28,3 +28,25 @@ def insertionsort(nums):
     
     return nums
 ===========================
+
+def quicksort(nums):
+    if len(nums) < 2:
+        return nums
+    
+    pivot_pos = 0
+    curr_pos = 0
+    
+    for i in range(1, len(nums)):
+        if nums[i] <= nums[pivot_pos]:
+            curr_pos += 1
+            nums[i], nums[curr_pos] = nums[curr_pos], nums[i]
+    
+    nums[pivot_pos], nums[curr_pos] = nums[curr_pos], nums[pivot_pos]
+    
+    return quicksort(nums[:curr_pos]) + [nums[curr_pos]] + quicksort(nums[curr_pos+1:])
+
+
+nums = [6, 5, 1, 4, 2, 5,8, 3, 7, 9, 2]
+print(quicksort(nums))
+
+=========================================
