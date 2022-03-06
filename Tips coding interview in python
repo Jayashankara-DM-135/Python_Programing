@@ -5,5 +5,14 @@
   
 2> Binary search : We compare Key with mid to make which side to move
    But, In modified Binary search tree we make decison by comparing mide with start value.
+
+3> mid calculation:
+    low + (high-low)//2
+    Note: '//' floor division, div is highest prioroty than 
+    
+4> Sorted matrix extracting mid value    
+    mid_ele = matrix[mid//col][mid%col]
+  
+    
   
   
