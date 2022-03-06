@@ -3,4 +3,7 @@
   # Convert list into string.
   "".join(res)
   
+2> Binary search : We compare Key with mid to make which side to move
+   But, In modified Binary search tree we make decison by comparing mide with start value.
+  
   
