@@ -4,7 +4,12 @@
   "".join(res)
   
 2> Binary search : We compare Key with mid to make which side to move
-   But, In modified Binary search tree we make decison by comparing mide with start value.
+   But, In modified Binary search tree we make decison by two setp:
+    A> check left part is sorted or right port sorted by comparing start value with mid 
+    B> Uses sorted part to check if mid value lies between that range:
+          a> if yes, continue with that direction else
+          b> chose other direction.
+          
 
 3> mid calculation:
     low + (high-low)//2
