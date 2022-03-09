@@ -1,0 +1,27 @@
+class Sloution:
+    
+    def mysqrt(self, num):
+        if num < 2:
+            return num
+        
+        left = 1
+        right  = num // 2
+        
+        while left <= right:
+            pivot = left + (right - left) // 2
+            temp = pivot * pivot
+            
+            if temp > num:
+                right = pivot - 1
+            elif temp < num:
+                left = pivot + 1
+            else:
+                return pivot
+        
+        return right
+
+obj = Sloution()
+print(obj.mysqrt(9))
+
+
+===================
