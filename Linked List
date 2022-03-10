@@ -1,0 +1,132 @@
+Head: 2, 4, 6, 5, 4, 2
+Mid : 8
+Reverse(mid)
+
+After reverse:
+Head: 2, 4, 6, 5
+ReversedHead: 2, 4, 6
+
+=================================
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def midleOfList(self, head):
+        if not head:
+            return head
+        slow = head
+        fast = head
+        
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow
+    
+    def reverseList(self, head):
+        if not head:
+            return head
+        
+        first = head
+        prev = None
+        while first:
+            next = first.next
+            first.next = prev
+            prev = first
+            first = next
+        
+        return prev
+            
+    def isPalindrome(self, head: ListNode) -> bool:
+        if not head:
+            return False
+        
+        mid = self.midleOfList(head)
+        revHead = self.reverseList(mid)
+        
+        
+            
+        
+        first = head
+        second = revHead
+        
+        while first and second:
+            if first.val != second.val:
+                break
+            first = first.next
+            second = second.next
+        
+        self.reverseList(revHead)
+        
+        if not first  or not second:
+            return True
+        return False
+        
+ ============================================
+ 
+ # Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
+        if not head:
+            return None
+        
+        slow = head
+        fast = head
+        
+        found = False
+        
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            
+            if slow == fast:
+                found = True
+                break
+        
+        if found:
+            start = head
+            curr = slow
+            while start != curr:
+                start = start.next
+                curr = curr.next
+            return start
+            
+        else:
+            return None
+==================================
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        p1 = l1
+        p2 = l2
+        
+        head = p3 = ListNode()
+        
+        while p1 and p2:
+            if p1.val <= p2.val:
+                p3.next = p1
+                p1 = p1.next
+            else:
+                p3.next = p2
+                p2 = p2.next
+            
+            p3 = p3.next
+        
+        if p1:
+            p3.next = p1
+        
+        if p2:
+            p3.next = p2
+        
+        return head.next
+  ================================
+        
+        
