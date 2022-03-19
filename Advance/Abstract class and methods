@@ -1,0 +1,51 @@
+Abstract method:
+   -> Method having declartion but does not have implemention. Such method are called abstract method.
+   -> Abstract method are decalred using @abstractmethod keyword
+
+Abstract class:
+   -> Class having at least one Abstract method is called Abstract Class
+   -> Can't create object for the abstract class
+   -> Abstract class in python must inherite from ABC class
+   -> Class which inherites the Abstract class must implement the abstract method.
+
+
+abc module in python provides the mechanism for defining abstract class and method.
+
+
+
+from abc import ABC, abstractmethod
+
+class Company(ABC):
+    
+    def __init__(self, details):
+        self.details = details
+    
+    @abstractmethod
+    def get_details_of_emp(self):
+        pass
+    
+    def get_company_details(self):
+        return "Company details {}".format(self.details)
+    
+        
+class Employee(Company):
+    def __init__(self, name, dept, companyDetails):
+        self.name = name
+        self.dept = dept
+        super().__init__(companyDetails)
+    
+    def get_details_of_emp(self):
+        return "Emp name {} and dept {}".format(self.name, self.dept)
+    
+
+
+if __name__ == "__main__":
+    emp1 = Employee("Jai", "PS", "software company")
+    
+    print(emp1.get_company_details())
+    print(emp1.get_details_of_emp())
+    
+    # TypeError: Can't instantiate abstract class.
+    #comp1 = Company("Hardware company")
+    
+
