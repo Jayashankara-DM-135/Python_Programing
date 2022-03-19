@@ -6,7 +6,8 @@ Abstract class:
    -> Class having at least one Abstract method is called Abstract Class
    -> Can't create object for the abstract class
    -> Abstract class in python must inherite from ABC class
-   -> Class which inherites the Abstract class must implement the abstract method.
+   -> Class which inherites the Abstract class must implement all the abstract method. if not then that calss also became abstract class.
+   -> Constructor can be created inside the Abstract class for initializing the varibles.
 
 
 abc module in python provides the mechanism for defining abstract class and method.
