@@ -32,6 +32,12 @@ In single-core CPU, you may get concurrency but NOT parallelism. Parallelism is 
 
 Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once.
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+Diff Lock and Mutex:
+A lock allows only one thread to enter the part that's locked and the lock is not shared with any other processes.
+
+A mutex is the same as a lock but it can be system wide (shared by multiple processes).
 An application can be concurrent — but not parallel, which means that it processes more than one task at the same time, 
                                    but no two tasks are executing at the same time instant.
                                    
