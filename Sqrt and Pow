@@ -1,3 +1,4 @@
+Sqrt:
 class Sloution:
     
     def mysqrt(self, num):
@@ -25,3 +26,26 @@ print(obj.mysqrt(9))
 
 
 ===================
+Pow(x, y)
+
+class Solution:
+    
+    def mypowHelper(self, x, n):
+        if n == 0:
+            return 1
+        
+        temp = self.mypowHelper(x, n//2)
+        
+        if n%2 == 0:
+            return temp * temp
+        else:
+            return x * temp * temp
+        
+        
+    
+    def myPow(self, x: float, n: int) -> float:
+        if n >= 0:
+            return self.mypowHelper(x, n)
+        
+        return 1/(self.mypowHelper(x, -n))
+        
