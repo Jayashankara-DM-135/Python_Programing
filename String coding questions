@@ -1,0 +1,31 @@
+Permutation:
+
+class Solution:
+    def __init__(self):
+        self.res = []
+    
+    
+    def helper(self, nums, chosen):
+        if len(chosen) == len(nums):
+            self.res.append(list(chosen))
+        else:
+            for num in nums:
+                if num not in chosen:
+                    chosen.append(num)
+                    self.helper(nums, chosen)
+                    chosen.pop()
+                    
+        
+    
+    def permutation(self, nums):
+        chosen = []
+        self.helper(nums, chosen)
+        return self.res
+
+
+if __name__ == "__main__":
+    obj = Solution()
+    print(obj.permutation(['a', 'b', 'c']))
+    
+    
+ ===================================================
