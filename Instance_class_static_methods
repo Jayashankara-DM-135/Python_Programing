@@ -10,6 +10,7 @@ Instance method:
 Class Methods:
 > Class methods are usually used to access class variables. It's not possible to access the instance varible.
 > Can be called using both class and Object, Better to call using Class name since these method deleas with only class varible.
+> When you called with object, no need to pass class name as a parameters.
 > Decalred using "@classmethod" keyword 
 > Class method uses "cls" as a first parameter.
 
@@ -18,4 +19,5 @@ Static method:
 > It does not take self or cls as a parameter.
 > It can be called using Class name or Object name, Better to call using Class name.
 > Declared using "@staticmethod"
+> when you need a utility function that doesn't access any properties of a class but makes sense that it belongs to the class
 
